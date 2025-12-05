@@ -63,18 +63,18 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           
           {/* Text Content */}
-          <div className="max-w-2xl mx-auto flex flex-col items-center">
+          <div className="max-w-3xl mx-auto flex flex-col items-center">
             {/* Badge - Hidden on Mobile (Req 1) */}
             <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-800 text-xs font-semibold uppercase tracking-wide mb-6">
               <span className="w-2 h-2 rounded-full bg-brand-500"></span>
               Transparência e Educação
             </div>
             
-            {/* Headline - Centered, 3 lines, specific coloring */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 tracking-tight leading-[1.15] mb-6 mt-2 sm:mt-0 text-center w-full">
-              Investimento em<br />
-              Cripto <span className="text-brand-700">com Segurança</span><br />
-              e Orientação Humana
+            {/* Headline - Strictly formatted to 3 lines across all devices */}
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-stone-900 tracking-tight leading-[1.2] mb-6 mt-2 sm:mt-0 text-center w-full">
+              <span className="whitespace-nowrap">Investimento em</span><br />
+              <span className="whitespace-nowrap">Cripto <span className="text-brand-700">com Segurança</span></span><br />
+              <span className="whitespace-nowrap">e Orientação Humana</span>
             </h1>
             
             <p className="text-lg sm:text-xl text-stone-600 mb-6 sm:mb-8 leading-relaxed max-w-lg text-center">
