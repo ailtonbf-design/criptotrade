@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
              {/* Using a placeholder that implies a meeting/discussion rather than code */}
              <div className="absolute inset-0 bg-stone-200 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700 ease-out">
                 <img 
-                    src="https://picsum.photos/800/1000?grayscale&blur=2" 
+                    src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764960715/Cripto_1_rqfaxz.png" 
                     alt="Consultoria Humanizada" 
                     className="w-full h-full object-cover opacity-90"
                 />
