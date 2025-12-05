@@ -70,8 +70,8 @@ const Hero: React.FC = () => {
               Transparência e Educação
             </div>
             
-            {/* Headline - Reverted to smaller responsive sizes while keeping structure */}
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-stone-900 tracking-tight mb-6 mt-2 sm:mt-0 text-center w-full">
+            {/* Headline - Updated mobile size to text-3xl */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-stone-900 tracking-tight mb-6 mt-2 sm:mt-0 text-center w-full">
               <span className="whitespace-nowrap">Investimento em</span><br />
               <span className="whitespace-nowrap">Cripto <span className="text-brand-700">com Segurança</span></span><br />
               <span className="whitespace-nowrap">e Orientação Humana</span>
