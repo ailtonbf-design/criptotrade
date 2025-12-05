@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
               </a>
               <a 
                 href="#sobre" 
-                className="px-8 py-4 bg-white text-stone-700 border border-stone-200 text-base font-medium rounded-lg hover:bg-stone-50 transition-all flex items-center gap-2"
+                className="hidden sm:flex px-8 py-4 bg-white text-stone-700 border border-stone-200 text-base font-medium rounded-lg hover:bg-stone-50 transition-all items-center gap-2"
               >
                 <BookOpen size={18} />
                 Nossa História
