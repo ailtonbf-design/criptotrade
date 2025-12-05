@@ -63,26 +63,28 @@ const Hero: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           
           {/* Text Content */}
-          <div className="max-w-2xl">
+          <div className="max-w-2xl mx-auto flex flex-col items-center">
             {/* Badge - Hidden on Mobile (Req 1) */}
             <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-800 text-xs font-semibold uppercase tracking-wide mb-6">
               <span className="w-2 h-2 rounded-full bg-brand-500"></span>
               Transparência e Educação
             </div>
             
-            {/* Headline - Closer to header on mobile (Req 2) */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 tracking-tight leading-[1.15] mb-6 mt-2 sm:mt-0">
-              Investimento em Cripto com <span className="text-brand-700">Segurança</span> e <span className="text-brand-700">Orientação Humana</span>.
+            {/* Headline - Centered, 3 lines, specific coloring */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-stone-900 tracking-tight leading-[1.15] mb-6 mt-2 sm:mt-0 text-center w-full">
+              Investimento em<br />
+              Cripto <span className="text-brand-700">com Segurança</span><br />
+              e Orientação Humana
             </h1>
             
-            <p className="text-lg sm:text-xl text-stone-600 mb-6 sm:mb-8 leading-relaxed max-w-lg">
+            <p className="text-lg sm:text-xl text-stone-600 mb-6 sm:mb-8 leading-relaxed max-w-lg text-center">
               Facilitamos suas negociações com clareza, ética e foco total em educação. Sem promessas vazias, apenas tecnologia segura e suporte real.
             </p>
             
             {/* MOBILE VISUALS (Req 3: Positioned between text and button) */}
             <HeroVisuals className="lg:hidden w-full h-[380px] sm:h-[480px] my-8" />
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 w-full justify-center">
               <a 
                 href="#contato" 
                 className="px-8 py-4 bg-stone-900 text-white text-base font-medium rounded-lg hover:bg-stone-800 transition-all shadow-lg hover:shadow-xl flex items-center gap-2 w-full sm:w-auto justify-center"
@@ -98,7 +100,7 @@ const Hero: React.FC = () => {
               </a>
             </div>
 
-            <div className="mt-8 sm:mt-12 flex items-center gap-6 text-stone-500 text-sm font-medium">
+            <div className="mt-8 sm:mt-12 flex items-center gap-6 text-stone-500 text-sm font-medium justify-center">
               <div className="flex items-center gap-2">
                 <Shield size={18} className="text-brand-700" />
                 <span>Normas da Receita Federal</span>
