@@ -56,25 +56,33 @@ const Hero: React.FC = () => {
 
           {/* Visual/Image Content */}
           <div className="relative hidden lg:block h-full min-h-[500px]">
-             {/* Floating Coin 1 - Top Right */}
+             {/* Floating Coin - Bitcoin */}
              <img 
-                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764962658/2_pbl4jr.png" 
-                className="absolute -top-12 -right-6 w-32 h-32 z-20 animate-float-slow drop-shadow-2xl object-contain"
-                alt="Crypto Asset Ethereum"
-             />
-
-             {/* Floating Coin 2 - Middle/Bottom Left */}
-             <img 
-                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764962658/1_skkugd.png" 
-                className="absolute bottom-24 -left-12 w-28 h-28 z-20 animate-float-medium drop-shadow-2xl object-contain"
+                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764966821/7_wmhepo.png" 
+                className="absolute top-1/3 left-16 w-24 h-24 z-20 animate-float-medium drop-shadow-xl object-contain"
                 alt="Crypto Asset Bitcoin"
              />
+
+             {/* Floating Coin - Ethereum */}
+             <img 
+                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764966821/5_mnznnz.png" 
+                className="absolute top-12 left-[38%] w-24 h-24 z-20 animate-float-slow drop-shadow-xl object-contain"
+                alt="Crypto Asset Ethereum"
+             />
+             
+             {/* Floating Coin - Tether */}
+             <img 
+                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764966821/6_hya9ig.png" 
+                className="absolute top-1/3 right-16 w-24 h-24 z-20 animate-float-medium drop-shadow-xl object-contain"
+                alt="Crypto Asset Tether"
+             />
+
 
              {/* Main Image Container */}
              <div className="absolute inset-0 z-10 flex justify-center items-center">
                 <img 
-                    src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764962829/Design_sem_nome_f3k9ui.png" 
-                    alt="Consultoria Humanizada" 
+                    src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764966821/4_yht182.png" 
+                    alt="Negociação segura de criptomoedas" 
                     className="w-full h-full object-contain drop-shadow-2xl"
                 />
              </div>
