@@ -56,8 +56,22 @@ const Hero: React.FC = () => {
 
           {/* Visual/Image Content */}
           <div className="relative hidden lg:block h-full min-h-[500px]">
-             {/* Using a placeholder that implies a meeting/discussion rather than code */}
-             <div className="absolute inset-0 bg-stone-200 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700 ease-out">
+             {/* Floating Coin 1 - Top Right */}
+             <img 
+                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764962212/2_dxb4th.png" 
+                className="absolute -top-12 -right-6 w-28 h-28 z-20 animate-float-slow drop-shadow-2xl object-contain"
+                alt="Crypto Asset Ethereum"
+             />
+
+             {/* Floating Coin 2 - Middle/Bottom Left */}
+             <img 
+                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764962212/1_wy4u1z.png" 
+                className="absolute bottom-24 -left-12 w-24 h-24 z-20 animate-float-medium drop-shadow-2xl object-contain"
+                alt="Crypto Asset Bitcoin"
+             />
+
+             {/* Main Image Container */}
+             <div className="absolute inset-0 bg-stone-200 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700 ease-out z-10">
                 <img 
                     src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764960715/Cripto_1_rqfaxz.png" 
                     alt="Consultoria Humanizada" 
@@ -70,7 +84,7 @@ const Hero: React.FC = () => {
              </div>
              
              {/* Floating Info Card */}
-             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-stone-100 max-w-xs animate-pulse-slow">
+             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-stone-100 max-w-xs animate-pulse-slow z-30">
                 <div className="flex items-start gap-4">
                     <div className="p-3 bg-green-50 rounded-lg text-green-700">
                         <Shield size={24} />
