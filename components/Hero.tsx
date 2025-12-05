@@ -59,21 +59,21 @@ const Hero: React.FC = () => {
              {/* Floating Coin - Bitcoin */}
              <img 
                 src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764966821/7_wmhepo.png" 
-                className="absolute top-1/3 left-16 w-24 h-24 z-20 animate-float-medium drop-shadow-xl object-contain"
+                className="absolute top-1/4 left-12 w-24 h-24 z-20 animate-float-medium drop-shadow-xl object-contain"
                 alt="Crypto Asset Bitcoin"
              />
 
              {/* Floating Coin - Ethereum */}
              <img 
                 src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764966821/5_mnznnz.png" 
-                className="absolute top-12 left-[38%] w-24 h-24 z-20 animate-float-slow drop-shadow-xl object-contain"
+                className="absolute top-8 left-[38%] w-24 h-24 z-20 animate-float-slow drop-shadow-xl object-contain"
                 alt="Crypto Asset Ethereum"
              />
              
              {/* Floating Coin - Tether */}
              <img 
                 src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764966821/6_hya9ig.png" 
-                className="absolute top-1/3 right-16 w-24 h-24 z-20 animate-float-medium drop-shadow-xl object-contain"
+                className="absolute top-1/4 right-12 w-24 h-24 z-20 animate-float-medium drop-shadow-xl object-contain"
                 alt="Crypto Asset Tether"
              />
 
@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
              {/* Main Image Container */}
              <div className="absolute inset-0 z-10 flex justify-center items-center">
                 <img 
-                    src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764966821/4_yht182.png" 
+                    src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764969045/Design_sem_nome_1_gyvmio.png" 
                     alt="Negociação segura de criptomoedas" 
                     className="w-full h-full object-contain drop-shadow-2xl"
                 />
