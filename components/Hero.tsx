@@ -58,29 +58,25 @@ const Hero: React.FC = () => {
           <div className="relative hidden lg:block h-full min-h-[500px]">
              {/* Floating Coin 1 - Top Right */}
              <img 
-                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764962212/2_dxb4th.png" 
-                className="absolute -top-12 -right-6 w-28 h-28 z-20 animate-float-slow drop-shadow-2xl object-contain"
+                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764962658/2_pbl4jr.png" 
+                className="absolute -top-12 -right-6 w-32 h-32 z-20 animate-float-slow drop-shadow-2xl object-contain"
                 alt="Crypto Asset Ethereum"
              />
 
              {/* Floating Coin 2 - Middle/Bottom Left */}
              <img 
-                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764962212/1_wy4u1z.png" 
-                className="absolute bottom-24 -left-12 w-24 h-24 z-20 animate-float-medium drop-shadow-2xl object-contain"
+                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764962658/1_skkugd.png" 
+                className="absolute bottom-24 -left-12 w-28 h-28 z-20 animate-float-medium drop-shadow-2xl object-contain"
                 alt="Crypto Asset Bitcoin"
              />
 
              {/* Main Image Container */}
              <div className="absolute inset-0 bg-stone-200 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700 ease-out z-10">
                 <img 
-                    src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764960715/Cripto_1_rqfaxz.png" 
+                    src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764962829/Design_sem_nome_f3k9ui.png" 
                     alt="Consultoria Humanizada" 
-                    className="w-full h-full object-cover opacity-90"
+                    className="w-full h-full object-cover"
                 />
-                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent flex flex-col justify-end p-8">
-                    <p className="text-white font-medium text-lg">"O conhecimento protege o investidor."</p>
-                    <p className="text-stone-300 text-sm mt-1">CripTrade - Desde 2023</p>
-                 </div>
              </div>
              
              {/* Floating Info Card */}
