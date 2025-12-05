@@ -55,25 +55,25 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Visual/Image Content */}
-          <div className="relative hidden lg:block h-full min-h-[500px]">
+          <div className="relative block mt-16 lg:mt-0 h-[400px] sm:h-[500px] lg:h-full lg:min-h-[500px]">
              {/* Floating Coin - Bitcoin */}
              <img 
                 src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764966821/7_wmhepo.png" 
-                className="absolute top-1/4 left-12 w-24 h-24 z-20 animate-float-medium drop-shadow-xl object-contain"
+                className="absolute top-1/3 left-4 sm:left-12 lg:left-4 lg:top-[20%] w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 z-20 animate-float-medium drop-shadow-xl object-contain"
                 alt="Crypto Asset Bitcoin"
              />
 
              {/* Floating Coin - Ethereum */}
              <img 
                 src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764966821/5_mnznnz.png" 
-                className="absolute top-8 left-[38%] w-24 h-24 z-20 animate-float-slow drop-shadow-xl object-contain"
+                className="absolute top-4 sm:top-8 left-1/2 -translate-x-1/2 lg:left-[42%] w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 z-20 animate-float-slow drop-shadow-xl object-contain"
                 alt="Crypto Asset Ethereum"
              />
              
              {/* Floating Coin - Tether */}
              <img 
                 src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764966821/6_hya9ig.png" 
-                className="absolute top-1/4 right-12 w-24 h-24 z-20 animate-float-medium drop-shadow-xl object-contain"
+                className="absolute top-1/3 right-4 sm:right-12 lg:right-20 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 z-20 animate-float-medium drop-shadow-xl object-contain"
                 alt="Crypto Asset Tether"
              />
 
@@ -88,7 +88,7 @@ const Hero: React.FC = () => {
              </div>
              
              {/* Floating Info Card */}
-             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-stone-100 max-w-xs animate-pulse-slow z-30">
+             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 lg:-bottom-6 lg:left-0 lg:translate-x-0 w-[90%] sm:w-auto bg-white p-6 rounded-xl shadow-xl border border-stone-100 max-w-xs animate-pulse-slow z-30">
                 <div className="flex items-start gap-4">
                     <div className="p-3 bg-green-50 rounded-lg text-green-700">
                         <Shield size={24} />
