@@ -71,11 +71,11 @@ const Hero: React.FC = () => {
              />
 
              {/* Main Image Container */}
-             <div className="absolute inset-0 bg-stone-200 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700 ease-out z-10">
+             <div className="absolute inset-0 z-10 flex justify-center items-center">
                 <img 
                     src="https://res.cloudinary.com/dapsovbs5/image/upload/v1764962829/Design_sem_nome_f3k9ui.png" 
                     alt="Consultoria Humanizada" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain drop-shadow-2xl"
                 />
              </div>
              
