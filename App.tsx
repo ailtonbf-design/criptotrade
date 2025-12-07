@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, ShieldCheck, Phone, ChevronRight } from 'lucide-react';
+import { Menu, X, Phone, ChevronRight } from 'lucide-react';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
 import ValuesGrid from './components/ValuesGrid';
@@ -27,9 +27,11 @@ const App: React.FC = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo area */}
             <div className="flex-shrink-0 flex items-center gap-2">
-              <div className="w-10 h-10 bg-brand-700 rounded-lg flex items-center justify-center text-white">
-                <ShieldCheck size={24} />
-              </div>
+              <img 
+                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1765126630/Pngtree_3d_futuristic_jelly_shield_icon_21534846_1_1_1_nzwytm.png" 
+                alt="CripTrade Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <div>
                 <span className="text-xl font-semibold tracking-tight text-stone-900 block leading-none">CripTrade</span>
                 <span className="text-xs text-stone-500 uppercase tracking-widest">Segurança & Educação</span>

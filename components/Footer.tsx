@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, ShieldCheck, Instagram, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -11,9 +11,11 @@ const Footer: React.FC = () => {
           {/* Brand Info */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-brand-700 rounded-md flex items-center justify-center text-white">
-                <ShieldCheck size={18} />
-              </div>
+              <img 
+                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1765126630/Pngtree_3d_futuristic_jelly_shield_icon_21534846_1_1_1_nzwytm.png" 
+                alt="CripTrade Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <span className="text-xl font-bold text-white">CripTrade</span>
             </div>
             <p className="text-stone-400 mb-6 leading-relaxed">
