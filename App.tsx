@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X, Bitcoin } from 'lucide-react';
 import Hero from './components/Hero';
 import AboutSection from './components/AboutSection';
 import ValuesGrid from './components/ValuesGrid';
@@ -9,8 +9,36 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [btcPrice, setBtcPrice] = useState<number | null>(null);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Fetch Bitcoin Price
+  useEffect(() => {
+    const fetchPrice = async () => {
+      try {
+        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=brl');
+        const data = await response.json();
+        if (data.bitcoin?.brl) {
+          setBtcPrice(data.bitcoin.brl);
+        }
+      } catch (error) {
+        console.error("Erro ao buscar preço do Bitcoin:", error);
+      }
+    };
+
+    fetchPrice();
+    // Atualiza a cada 60 segundos para evitar rate-limit da API pública
+    const interval = setInterval(fetchPrice, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const formatCurrency = (value: number) => {
+    return new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+    }).format(value);
+  };
 
   const navLinks = [
     { label: 'Sobre', href: '#sobre' },
@@ -26,15 +54,31 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo area */}
-            <div className="flex-shrink-0 flex items-center gap-2">
-              <img 
-                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1765126630/Pngtree_3d_futuristic_jelly_shield_icon_21534846_1_1_1_nzwytm.png" 
-                alt="CripTrade Logo" 
-                className="w-10 h-10 object-contain"
-              />
-              <div>
-                <span className="text-xl font-semibold tracking-tight text-stone-900 block leading-none">CripTrade</span>
-                <span className="text-xs text-stone-500 uppercase tracking-widest">Segurança & Educação</span>
+            <div className="flex-shrink-0 flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <img 
+                  src="https://res.cloudinary.com/dapsovbs5/image/upload/v1765222922/Logo_maygtz.png" 
+                  alt="CripTrade Logo" 
+                  className="w-10 h-10 object-contain"
+                />
+                <div className="hidden xs:block">
+                  <span className="text-xl font-semibold tracking-tight text-stone-900 block leading-none">CripTrade</span>
+                  <span className="text-xs text-stone-500 uppercase tracking-widest">Segurança & Educação</span>
+                </div>
+              </div>
+
+              {/* Bitcoin Ticker - Visible on Desktop and Mobile */}
+              <div className="flex items-center gap-2 bg-stone-100 border border-stone-200 rounded-full px-3 py-1.5 shadow-sm">
+                <div className="relative">
+                  <Bitcoin size={16} className="text-orange-500" />
+                  <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-1 leading-none">
+                  <span className="text-xs font-bold text-stone-500 uppercase">BTC</span>
+                  <span className="text-sm font-mono font-semibold text-stone-800">
+                    {btcPrice ? formatCurrency(btcPrice) : '...'}
+                  </span>
+                </div>
               </div>
             </div>
 

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
+import PrivacyModal from './PrivacyModal';
 
 const Footer: React.FC = () => {
+  const [isPrivacyModalOpen, setPrivacyModalOpen] = useState(false);
+
   return (
     <footer id="contato" className="bg-stone-900 text-stone-300 pt-16 pb-8 border-t border-stone-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,7 +15,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <img 
-                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1765126630/Pngtree_3d_futuristic_jelly_shield_icon_21534846_1_1_1_nzwytm.png" 
+                src="https://res.cloudinary.com/dapsovbs5/image/upload/v1765222922/Logo_maygtz.png" 
                 alt="CripTrade Logo" 
                 className="w-10 h-10 object-contain"
               />
@@ -78,11 +81,21 @@ const Footer: React.FC = () => {
           <p>© {new Date().getFullYear()} CripTrade. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
              <span className="hover:text-stone-300 cursor-pointer">Termos de Uso</span>
-             <span className="hover:text-stone-300 cursor-pointer">Política de Privacidade</span>
+             <button 
+               onClick={() => setPrivacyModalOpen(true)}
+               className="hover:text-stone-300 cursor-pointer transition-colors"
+             >
+               Política de Privacidade
+             </button>
           </div>
         </div>
 
       </div>
+
+      <PrivacyModal 
+        isOpen={isPrivacyModalOpen} 
+        onClose={() => setPrivacyModalOpen(false)} 
+      />
     </footer>
   );
 };
