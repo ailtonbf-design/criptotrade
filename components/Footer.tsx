@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
 import PrivacyModal from './PrivacyModal';
+import TermsModal from './TermsModal';
 
 const Footer: React.FC = () => {
   const [isPrivacyModalOpen, setPrivacyModalOpen] = useState(false);
+  const [isTermsModalOpen, setTermsModalOpen] = useState(false);
 
   return (
     <footer id="contato" className="bg-stone-900 text-stone-300 pt-16 pb-8 border-t border-stone-800">
@@ -80,7 +82,12 @@ const Footer: React.FC = () => {
         <div className="border-t border-stone-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-stone-500">
           <p>© {new Date().getFullYear()} CripTrade. Todos os direitos reservados.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-             <span className="hover:text-stone-300 cursor-pointer">Termos de Uso</span>
+             <button
+               onClick={() => setTermsModalOpen(true)}
+               className="hover:text-stone-300 cursor-pointer transition-colors"
+             >
+               Termos de Uso
+             </button>
              <button 
                onClick={() => setPrivacyModalOpen(true)}
                className="hover:text-stone-300 cursor-pointer transition-colors"
@@ -95,6 +102,11 @@ const Footer: React.FC = () => {
       <PrivacyModal 
         isOpen={isPrivacyModalOpen} 
         onClose={() => setPrivacyModalOpen(false)} 
+      />
+      
+      <TermsModal 
+        isOpen={isTermsModalOpen} 
+        onClose={() => setTermsModalOpen(false)} 
       />
     </footer>
   );
